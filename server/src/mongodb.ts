@@ -1,6 +1,6 @@
 import { connect, model, Schema } from 'mongoose';
 
-const connectString = '';
+const connectString = process.env.DATABASE_URL!;
 
 connect(connectString).then(() => {
   console.log(`\x1b[92mSuccessfully connected to the database. \x1b[0m`);
