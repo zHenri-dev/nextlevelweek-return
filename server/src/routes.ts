@@ -13,7 +13,7 @@ routes.post('/feedbacks', async (req, res) => {
     comment,
     screenshot,
     createdAt: new Date().getTime(),
-    from: req.socket.remoteAddress
+    from: req.headers['x-forwarded-for']
   });
 
   return res.status(201).send();

@@ -1,6 +1,6 @@
 import { connect, model, Schema } from 'mongoose';
 
-const connectString = process.env.DATABASE_URL! || "mongodb+srv://zHenri:jUXNAPXKHJtLQJrz@cluster0.t2mw0.mongodb.net/feedback-widget?retryWrites=true&w=majority";
+const connectString = process.env.DATABASE_URL!;
 
 connect(connectString).then(() => {
   console.log(`\x1b[92mSuccessfully connected to the database. \x1b[0m`);
