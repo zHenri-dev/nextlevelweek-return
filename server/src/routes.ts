@@ -4,6 +4,7 @@ import { feedbacks } from './mongodb';
 export const routes = express.Router();
 
 routes.post('/feedbacks', async (req, res) => {
+  console.log(req)
   const { type, comment, screenshot } = req.body;
   if (!type || !comment) return res.status(400).send();
 
