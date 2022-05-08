@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: "https://zhenri-feedback-widget.vercel.app/"
+  origin: "https://zhenri-feedback-widget.vercel.app"
 }));
 app.use(routes);
 
