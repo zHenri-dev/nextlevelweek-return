@@ -1,7 +1,9 @@
-import { ArrowLeft } from "phosphor-react";
 import { FormEvent, useState } from "react";
-import { FeedbackType, feedbackTypes } from "..";
 import { api } from "../../../lib/api";
+
+import { ArrowLeft } from "phosphor-react";
+import { FeedbackType, feedbackTypes } from "..";
+
 import { CloseButton } from "../../CloseButton";
 import { Loading } from "../../Loading";
 import { ScreenshotButton } from "../ScreenshotButton";
@@ -40,7 +42,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
         </button>
 
         <span className="text-xl leading-6 flex items-center gap-2">
-          <img src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.source} className="w-6 h-6" />
+          <img src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.alt} className="w-6 h-6" />
           {feedbackTypeInfo.title}
         </span>
 
@@ -59,8 +61,6 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
             screenshot={screenshot}
             onScreenshotTook={setScreenshot}
           />
-
-          
 
           <button
             type="submit"
