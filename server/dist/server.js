@@ -8,8 +8,10 @@ const cors_1 = __importDefault(require("cors"));
 const routes_1 = require("./routes");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)({
+    origin: "https://zhenri-feedback-widget.vercel.app"
+}));
 app.use(routes_1.routes);
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
     console.log('HTTP server running!');
 });

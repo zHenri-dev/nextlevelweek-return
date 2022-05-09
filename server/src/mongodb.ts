@@ -1,6 +1,8 @@
 import { connect, model, Schema } from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const connectString = process.env.DATABASE_URL!;
+const connectString = process.env.DATABASE_URL as string;
 
 connect(connectString).then(() => {
   console.log(`\x1b[92mSuccessfully connected to the database. \x1b[0m`);

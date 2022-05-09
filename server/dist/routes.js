@@ -8,6 +8,7 @@ const express_1 = __importDefault(require("express"));
 const mongodb_1 = require("./mongodb");
 exports.routes = express_1.default.Router();
 exports.routes.post('/feedbacks', async (req, res) => {
+    console.log(req);
     const { type, comment, screenshot } = req.body;
     if (!type || !comment)
         return res.status(400).send();
@@ -16,6 +17,7 @@ exports.routes.post('/feedbacks', async (req, res) => {
         comment,
         screenshot,
         createdAt: new Date().getTime(),
+        from: req.headers['x-forwarded-for']
     });
     return res.status(201).send();
 });
