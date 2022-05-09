@@ -1,4 +1,5 @@
 import { FormEvent, useState } from "react";
+import Image from "next/image";
 import { api } from "../../../lib/api";
 
 import { ArrowLeft } from "phosphor-react";
@@ -42,7 +43,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
         </button>
 
         <span className="text-xl leading-6 flex items-center gap-2">
-          <img src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.alt} className="w-6 h-6" />
+          <Image src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.alt} className="w-6 h-6" />
           {feedbackTypeInfo.title}
         </span>
 
