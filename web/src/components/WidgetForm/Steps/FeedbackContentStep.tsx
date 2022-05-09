@@ -43,7 +43,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
         </button>
 
         <span className="text-xl leading-6 flex items-center gap-2">
-          <Image src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.alt} width={'1.5rem'} height={'1.5rem'}/>
+          <Image src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.alt} sizes="1.5rem"/>
           {feedbackTypeInfo.title}
         </span>
 
