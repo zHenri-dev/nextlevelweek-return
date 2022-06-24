@@ -1,5 +1,5 @@
 ﻿# nextlevelweek-return
-Sistema de feedbacks criado junto com a equipe da Rocketseat no evento Next Level Week.
+Sistema de envios feedbacks criado junto com a equipe da Rocketseat no evento Next Level Week.
 <br>
 Layout no Figma: https://www.figma.com/community/file/1102912516166573468
 <br>
